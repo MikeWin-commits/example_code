@@ -53,7 +53,7 @@ for file in os.listdir(data_dir):
 
         # Initialize Epochs
         tmin, tmax = -0.8, 0.2
-        baseline = (None, 0)  # means from the first instant to t = 0
+        baseline = (None, 0)  
         picks = mne.pick_types(raw_interp.info, eeg=True, stim=True)
         epochs = mne.Epochs(raw_interp, events, event_mapping, tmin, tmax,
                             picks=picks, baseline=None, reject=None, decim=decim,
